@@ -8,6 +8,18 @@
 
 <video src="https://user-images.githubusercontent.com/5242555/166191177-eb0a5a90-4f29-416e-a560-c0692bba4e93.mp4" controls width=512></video>
 
+---
+
+| Sorce | Target |
+|---|---|
+| <img width="256" src="demo_file/yoon.jpg"> | [demo_file/video2.mp4](demo_file/video2.mp4) |
+
+* Enhance resolution using BSRGAN
+
+<video src="https://user-images.githubusercontent.com/5242555/166191715-7d2a9a86-b53f-4b82-a416-ff2d348e2125.mp4" controls width=512></video>
+
+---
+
 | Sorce | Target |
 |---|---|
 | <img width="256" src="demo_file/avatar_01.jpg"> | [demo_file/video2.mp4](demo_file/video2.mp4) |
