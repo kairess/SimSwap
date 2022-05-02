@@ -65,6 +65,13 @@ def video_swap(video_path, id_vetor, swap_model, detect_model, save_path, temp_r
     else:
         net =None
 
+    from models.network_rrdbnet import RRDBNet
+    rrdbnet = RRDBNet(in_nc=3, out_nc=3, nf=64, nb=23, gc=32, sf=4)
+    rrdbnet.load_state_dict(torch.load('C:/Users/Brad/Development/BSRGAN/model_zoo/BSRGAN.pth'), strict=True)
+    rrdbnet = rrdbnet.to('cuda')
+    rrdbnet.eval()
+    print('RRDBNet loaded!')
+
     # while ret:
     for frame_index in tqdm(range(frame_count)): 
         ret, frame = video.read()
@@ -87,6 +94,7 @@ def video_swap(video_path, id_vetor, swap_model, detect_model, save_path, temp_r
                     frame_align_crop_tenor = _totensor(cv2.cvtColor(frame_align_crop,cv2.COLOR_BGR2RGB))[None,...].cuda()
 
                     swap_result = swap_model(None, frame_align_crop_tenor, id_vetor, None, True)[0]
+                    swap_result = rrdbnet(swap_result.unsqueeze(0)).squeeze()
                     cv2.imwrite(os.path.join(temp_results_dir, 'frame_{:0>7d}.jpg'.format(frame_index)), frame)
                     swap_result_list.append(swap_result)
                     frame_align_crop_tenor_list.append(frame_align_crop_tenor)
