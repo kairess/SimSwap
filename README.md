@@ -1,3 +1,40 @@
+# 세상에서 가장 쉬운 딥페이크 SimSwap
+
+## Result
+
+| Sorce | Target |
+|---|---|
+| <img width="256" src="demo_file/yoon.jpg"> | [demo_file/moon.mp4](demo_file/moon.mp4) |
+
+<video src="https://github.com/kairess/SimSwap/raw/main/output/yoon.jpg_moon.mp4.mp4" controls width=512 autoplay></video>
+
+## Run
+
+```
+python test_simple.py
+```
+
+## Pretrained Models
+
+1. Face detection and align model
+https://onedrive.live.com/?authkey=%21ADJ0aAOSsc90neY&cid=4A83B6B633B029CC&id=4A83B6B633B029CC%215837&parId=4A83B6B633B029CC%215834&action=locate
+
+-> insightface_func/models/antelope/*.onnx
+
+2. Face parsing model
+https://drive.google.com/file/d/154JgKpzCPW82qINcVieuPH3fZ2e0P812/view?usp=sharing
+
+-> parsing_model/checkpoint/79999_iter.pth
+
+3. Face recognition model and SimSwap pretrained model
+https://drive.google.com/drive/folders/1jV6_0FIMPC53FZ2HzZNJZGMe55bbu17R
+
+-> arcface_model/arcface_checkpoint.tar
+
+-> checkpoints/people/latest_net_G.pth
+
+---
+
 # SimSwap: An Efficient Framework For High Fidelity Face Swapping
 ## Proceedings of the 28th ACM International Conference on Multimedia
 **The official repository with Pytorch**
