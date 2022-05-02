@@ -6,7 +6,7 @@
 |---|---|
 | <img width="256" src="demo_file/yoon.jpg"> | [demo_file/moon.mp4](demo_file/moon.mp4) |
 
-<video src="https://github.com/kairess/SimSwap/raw/main/output/yoon.jpg_moon.mp4.mp4" controls width=512 autoplay></video>
+<video src="https://raw.githubusercontent.com/kairess/SimSwap/main/output/yoon.jpg_moon.mp4.mp4" controls width=512 autoplay></video>
 
 ## Run
 
