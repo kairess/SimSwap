@@ -83,7 +83,7 @@ class Face_detect_crop:
         #     M, _ = face_align.estimate_norm(kps, crop_size, mode ='None') 
         #     align_img = cv2.warpAffine(img, M, (crop_size, crop_size), borderValue=0.0)
 
-        det_score = bboxes[..., 4]
+        det_score = bboxes[..., 2] - bboxes[..., 0] # extract the largest face
 
         # select the face with the hightest detection score
         best_index = np.argmax(det_score)
