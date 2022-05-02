@@ -42,7 +42,7 @@ if __name__ == '__main__':
     opt.use_mask = True
     opt.Arc_path = 'arcface_model/arcface_checkpoint.tar'
 
-    opt.output_path = os.path.join('output', '%s_%s_BSRGAN.mp4' % (os.path.basename(opt.pic_a_path), os.path.basename(opt.video_path)))
+    opt.output_path = os.path.join('output', '%s_%s.mp4' % (os.path.basename(opt.pic_a_path), os.path.basename(opt.video_path)))
 
     model = create_model(opt)
     model.eval()
